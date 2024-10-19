@@ -2417,30 +2417,8 @@ function initialization() {
 }
 //#endregion
 
-function cheat2(tipo) {
-    if (tipo === 1) {player.coins.amount *= 999999999; stats.totalCoins *= 999999999;}
-    if (tipo === 2) {player.resources.amount *= 999999999; stats.totalResources *= 999999999;}
-    if (tipo === 3) {player.supplies.amount *= 999999999; stats.totalSupplies *= 999999999;}
-    if (tipo === 4) {player.energy.amount *= 999999999; stats.totalEnergy *= 999999999;}
-    updateCounters();
-}
-    var timeskip = 0;
-function cheat(amount) {
-    let monedas = ((amount * 60) * player.coins.second * player.coins.upgrades);
-    let recursos = ((amount * 60) * player.resources.second * player.resources.upgrades);
-    let alimento = ((amount * 60) * player.supplies.second * player.supplies.upgrades);
-    let energia = ((amount * 60) * player.energy.second * player.energy.upgrades);
-    
-    stats.totalCoins += monedas;
-    stats.totalResources += recursos;
-    stats.totalSupplies += alimento;
-    stats.totalEnergy += energia;
-    
-    player.coins.amount += monedas;
-    player.resources.amount += recursos;
-    player.supplies.amount += alimento;
-    player.energy.amount += energia;
-    timeskip += amount / 60; 
-    did("timeskip").textContent = timeskip.toFixed(0);
+function cheat() {
+    rpgPlayer.coins += 10000000000
+    stats.totalCoins += 10000000000
     updateCounters();
 }
