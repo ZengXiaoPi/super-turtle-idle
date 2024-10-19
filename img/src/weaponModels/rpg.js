@@ -323,8 +323,8 @@ function projectile(img, throwAnimation, particleCount, particleType){
     //sets the particle position to the projectile with some randomness    
     const projectileLeft = projectile.offsetLeft;
     const projectileTop = projectile.offsetTop;
-    const randomOffsetX = Math.random() * 50 - 00;
-    const randomOffsetY = Math.random() * 50 - 00;
+    const randomOffsetX = Math.random() * 50 - 0;
+    const randomOffsetY = Math.random() * 50 - 0;
     const particleLeft = projectileLeft + randomOffsetX;
     const particleTop = projectileTop + randomOffsetY;
     particle.style.left = particleLeft + 'px';
